@@ -8,7 +8,8 @@ import datetime
 app = Flask(__name__, static_folder='', template_folder='')
 
 # MongoDB configuration
-app.config["MONGO_URI"] = "mongodb://localhost:27017/neuronairegistrations"
+app.config["MONGO_URI"] = "mongodb+srv://karthik:Karthik@cluster0.v7xzk.mongodb.net/neuronairegistrations?retryWrites=true&w=majority"
+
 mongo = PyMongo(app)
 
 # Flask-Mail configuration
