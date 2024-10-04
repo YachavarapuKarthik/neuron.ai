@@ -1,5 +1,4 @@
 from flask import Flask, send_from_directory, request, redirect, url_for, flash
-from flask_mail import Mail, Message
 from flask_pymongo import PyMongo
 import secrets
 import datetime
@@ -8,19 +7,18 @@ import datetime
 app = Flask(__name__, static_folder='', template_folder='')
 
 # MongoDB configuration
-app.config["MONGO_URI"] = "mongodb+srv://karthik:Karthik@cluster0.v7xzk.mongodb.net/neuronairegistrations?retryWrites=true&w=majority"
-
+app.config["MONGO_URI"] = "mongodb://localhost:27017/neuronairegistrations"
 mongo = PyMongo(app)
 
-# Flask-Mail configuration
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-app.config['MAIL_PORT'] = 587
-app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'neuron.ai.india@gmail.com'
-app.config['MAIL_PASSWORD'] = 'jpsxejblmkzccclg'  # Use your app-specific password here
-app.config['MAIL_DEFAULT_SENDER'] = 'neuron.ai.india@gmail.com'
+# Flask-Mail configuration (Commented out)
+# app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+# app.config['MAIL_PORT'] = 587
+# app.config['MAIL_USE_TLS'] = True
+# app.config['MAIL_USERNAME'] = 'neuron.ai.india@gmail.com'
+# app.config['MAIL_PASSWORD'] = 'jpsxejblmkzccclg'  # Use your app-specific password here
+# app.config['MAIL_DEFAULT_SENDER'] = 'neuron.ai.india@gmail.com'
 
-mail = Mail(app)
+# mail = Mail(app)
 
 # Generate a secure random key
 app.secret_key = secrets.token_hex(16)
@@ -64,22 +62,22 @@ def contact():
             "created_at": datetime.datetime.now(datetime.timezone.utc)
         })
 
-        # Create email messages
-        msg1 = Message(subject="Contact Form Submission",
-                       recipients=['neuron.ai.india@gmail.com'],
-                       body=f"New message from {name} ({email}):\n\n{message}\nPhone Number:\n\n{phone}")
+        # Create email messages (Commented out)
+        # msg1 = Message(subject="Contact Form Submission",
+        #                recipients=['neuron.ai.india@gmail.com'],
+        #                body=f"New message from {name} ({email}):\n\n{message}\nPhone Number:\n\n{phone}")
 
-        msg2 = Message(subject="Contact Form Submission Successful",
-                       recipients=[email],
-                       body=f"Soon you'll receive mail or call, your message:\n\n{message}")
+        # msg2 = Message(subject="Contact Form Submission Successful",
+        #                recipients=[email],
+        #                body=f"Soon you'll receive mail or call, your message:\n\n{message}")
 
-        try:
-            # Send emails
-            mail.send(msg1)
-            mail.send(msg2)
-            flash('Your message has been sent successfully!', 'success')
-        except Exception as e:
-            flash(f'An error occurred: {e}', 'error')
+        #try:
+            # Send emails (Commented out)
+            # mail.send(msg1)
+            # mail.send(msg2)
+        #    flash('Your message has been sent successfully!', 'success')
+        #except Exception as e:
+        #    flash(f'An error occurred: {e}', 'error')
 
     return send_from_directory('html', 'contact.html')
 
@@ -99,23 +97,23 @@ def register():
 
         })
 
-        # Email to admin
-        msg1 = Message(subject="New Neuron.ai Registration",
-                       recipients=["neuronaihelpdesk@gmail.com"],
-                       body=f"New Neuron.ai registration from {username} ({email}):")
+        # Email to admin (Commented out)
+        # msg1 = Message(subject="New Neuron.ai Registration",
+        #                recipients=["neuronaihelpdesk@gmail.com"],
+        #                body=f"New Neuron.ai registration from {username} ({email}):")
 
-        # Confirmation email to user
-        msg2 = Message(subject="Neuron.ai Registration Successful",
-                       recipients=[email],
-                       body=f"Thank you for registering at Neuron.ai, {username}!\n\nWe will contact you soon with more details.")
+        # Confirmation email to user (Commented out)
+        # msg2 = Message(subject="Neuron.ai Registration Successful",
+        #                recipients=[email],
+        #                body=f"Thank you for registering at Neuron.ai, {username}!\n\nWe will contact you soon with more details.")
 
-        try:
-            # Send emails
-            mail.send(msg1)
-            mail.send(msg2)
-            flash('Registration successful! A confirmation email has been sent.', 'success')
-        except Exception as e:
-            flash(f'An error occurred while sending emails: {e}', 'error')
+        #try:
+            # Send emails (Commented out)
+            # mail.send(msg1)
+            # mail.send(msg2)
+            #flash('Registration successful! A confirmation email has been sent.', 'success')
+            #except Exception as e:
+            #flash(f'An error occurred while sending emails: {e}', 'error')
 
         return redirect(url_for('home'))
 
@@ -139,22 +137,22 @@ def register_courses():
             "status": "pending"
         })
 
-        msg1 = Message(subject="New Course Registration",
-                       recipients=["neuronaihelpdesk@gmail.com"],
-                       body=f"New registration from {username} ({email}):\n\nPhone Number: {phone}\nCourse: {course}")
+        # msg1 = Message(subject="New Course Registration",
+        #                recipients=["neuronaihelpdesk@gmail.com"],
+        #                body=f"New registration from {username} ({email}):\n\nPhone Number: {phone}\nCourse: {course}")
 
-        # Confirmation email to user
-        msg2 = Message(subject="Course Registration Successful",
-                       recipients=[email],
-                       body=f"Thank you for registering for the {course} course, {username}!\n\nWe will contact you soon with more details.")
+        # Confirmation email to user (Commented out)
+        # msg2 = Message(subject="Course Registration Successful",
+        #                recipients=[email],
+        #                body=f"Thank you for registering for the {course} course, {username}!\n\nWe will contact you soon with more details.")
 
-        try:
-            # Send emails
-            mail.send(msg1)
-            mail.send(msg2)
-            flash('Registration successful! A confirmation email has been sent.', 'success')
-        except Exception as e:
-            flash(f'An error occurred while sending emails: {e}', 'error')
+        #try:
+            # Send emails (Commented out)
+            # mail.send(msg1)
+            # mail.send(msg2)
+            #flash('Registration successful! A confirmation email has been sent.', 'success')
+        #except Exception as e:
+            #flash(f'An error occurred while sending emails: {e}', 'error')
 
         print("registration is also done")
         return redirect(url_for('home'))
