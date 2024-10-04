@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/register.css">
+    <script src="https://kit.fontawesome.com/c0e27fec68.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class='login-outer-container'>
+        <div class='login-container'>
+            <div class='login-area'>
+                <h3>Register to neuron.ai</h3>
+                <form class='login-items' method="POST" action="/register_courses">
+                    <label for="name">Name</label>
+                    <input type="text" class='login' name="name" placeholder='Your name' id = "name" required />
+                    <label for="email">Email</label>
+                    <input type="email" class='login' name="email" placeholder="your-email@gmail.com" id="email" required />
+                    <label for="phone">Phone</label>
+                    <input type="number" class='login' name="phone" id="phone" placeholder='Enter phone number' required />
+                    <label for="course-title">Course</label>
+                   <input type="text" class='login' name="course-title" id="course-title" readonly />
+                    <input type="submit" class='login-btn' value="Enroll now" />
+                </form>
+                <script>
+        window.onload = function() {
+            // Get URL query parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const courseTitle = urlParams.get('course-title');
+
+            // Set the value to the text input field
+            document.getElementById('course-title').value = courseTitle;
+        }
+    </script>
+
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

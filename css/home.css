@@ -1,0 +1,657 @@
+@font-face {
+    font-family: gilmama;
+    src: url(/gilroy/Gilroy-Medium.ttf);
+}
+html{
+    scroll-behavior: smooth;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: gilmama;
+    /* scrollbar-gutter: stable; */
+}
+.talk{
+    width: 100%;
+    height: 40px;
+    background-color: #0d2235;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+.talkin{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1rem;
+    
+}
+.talkin i{
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+.navbar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.navin {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 150px;
+    height: 70%;
+    background-image: url(/img/nlogo.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.links {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.links a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    padding-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: rgb(12, 122, 237);
+    transition: width 0.5s ease-in-out;
+}
+
+.links a:hover::after {
+    width: 100%;
+}
+
+.btn1 {
+    position: relative;
+    width: 160px;
+    height: 45px;
+    font-size: 1.1rem;
+    border: none;
+    background: linear-gradient(115deg, #2c67f2, #62cff4);
+    color: white;
+    border-radius: 3px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color 1s ease;
+    z-index: 1;
+}
+
+.btn1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(115deg, #62cff4, #2c67f2);
+    transition: opacity 1s ease;
+    opacity: 0;
+    z-index: -1;
+    border-radius: 3px;
+}
+
+.btn1:hover::before {
+    opacity: 1;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(40px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.mobile-menu.show {
+    display: flex;
+    opacity: 1;
+    z-index: 100;
+}
+
+.mobile-menu a {
+    font-size: 1.5rem;
+    margin: 15px 0;
+    text-decoration: none;
+    color: black;
+}
+
+.mobile-menu .btn1 {
+    margin-top: 20px;
+}
+
+.closebtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+/*
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+ */
+
+
+
+.hero{
+    width: 100%;
+    height: auto;
+    background: linear-gradient(90deg, #fab2ff, #1904e5);
+    display: flex;
+}
+.matter1{
+    width: 50%;
+    height: 100%;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+.m1box{
+    width: 80%;
+    height: 80%;
+    /* background-color: green; */
+    color: white;
+    /* line-height: 60px; */
+    margin-top: 170px;
+
+}
+.head1{
+    font-size: 60px;
+    font-weight: 100;
+    margin-bottom: 15px;
+}
+.head2{
+    font-size: 80px;
+    line-height: 90px;
+    margin-bottom: 15px;
+}
+.m1box p{
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.image1{
+    width: 50%;
+    height: 750px;
+    /* background-color: brown; */
+    display: flex;
+    align-items: center;
+}
+.imgbox1{
+    width: 100%;
+    height: 83%;
+    /* background-color: green; */
+    background-image: url(/img/heroimg1.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 170px;
+}
+.features{
+    width: 100%;
+    height: auto;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    
+}
+.fbox{
+    width: 80%;
+    height: 100%;
+}
+h2{
+    text-align: center;
+    font-size: 50px;
+    
+}
+.wwo{
+    font-size: 30px;
+    margin-top: 50px;
+}
+.fcards{
+    width: 100%;
+    height: 100%;
+    /* background-color: green; */
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+
+}
+.fcards h3{
+    font-size: 30px;
+}
+.cards {
+    position: relative;
+    height: 100%;
+    width: 31%;
+    text-align: center;
+    padding-top: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5f9ff;
+    border-radius: 4px;
+    overflow: hidden; /* Ensures the pseudo-element doesn't overflow the card */
+    transition: all 0.5s ease;
+    /* margin-bottom: 20px; */
+}
+
+.cards::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(115deg, #2c67f2, #62cff4);
+    z-index: 0; /* Places the pseudo-element behind the card content */
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.cards:hover::before {
+    opacity: 1;
+}
+
+.cards * {
+    position: relative;
+    z-index: 1; /* Ensures the card content is above the pseudo-element */
+   
+}
+
+.cards:hover {
+    color: #fff; /* Optional: Change text color on hover for better visibility */
+}
+
+.cards:hover i{
+    scale: 0.9;
+}
+
+
+.icon{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    /* margin-top: 30px; */
+    color: white;
+    background: linear-gradient(90deg, #fab2ff, #1904e5);
+    transition: all 0.5s ease;
+
+}
+.iborder{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    transition: all 0.5s ease-in;
+    
+}
+.cards:hover .icon{
+    scale: 1.2;
+}
+.cards:hover .iborder{
+    border: 4px dashed white;
+}
+.icon i{
+    transition: all 0.5s ease;
+
+}
+.data{
+    width: 85%;
+    height: 200px;
+    /* background-color: blue; */
+    margin-top: 20px;
+    padding: 0;
+    font-size: 20px;
+    line-height: 30px;
+}
+.cards .btn1{
+    font-size: 20px;
+    margin-bottom: 20px;
+    
+}
+.memhead{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.memhead h3{
+    font-size: 40px;
+    line-height: 50px;
+    text-transform: bold;
+
+    
+    
+}
+.memhead .h32{
+    color: rgb(53, 113, 224);
+}
+
+.members{
+    width: 100%;
+    height: auto;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+.membox{
+    width:95%;
+    height: 100%;
+    /* background-color: green; */
+    display: flex;
+    justify-content: space-between;
+}
+.mem{
+    width: 30%;
+    height: 100%;
+    /* background-color: brown; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    border-radius: 20px;
+    /* border: 2px solid grey; */
+    transition: all 0.5s ease;
+    overflow: hidden;
+    background-color: rgb(245, 249, 255);
+}
+
+.mem:hover{
+    background-color: #f5f9ff;
+    box-shadow: none;
+    border-radius: 0;
+    box-shadow: 0px 0px 10px 2px grey;
+}
+.memimg{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; 
+    
+}
+#mem1{
+    background:url(/img/bhargav1.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#mem3{
+    background:url(/img/karthik.jpg);
+    background-size: cover;
+    background-repeat: no-repeat; 
+    scale: 1.2;
+}
+#mem2{
+    background:url(/img/kowsik1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    scale: 1.2; 
+}
+.mem h3{
+    font-size: 35px;
+    margin: 20px 0 2px 0;
+}
+.mem p{
+    font-size: 17px;
+    text-align: center;
+    color: grey;
+}
+.mem h4{
+    font-size: 25px;
+    text-transform: italic;
+    margin-top: 20px;
+    margin: 20px 15px 0 15px;
+    text-align: center;
+
+}
+.mem h5{
+    text-align: center;
+    color: grey;
+    margin-top: 15px;
+    font-size: 19px;
+    margin: 15px 10px;
+    font-weight: 100;
+}
+
+.footer {
+    background-color: #0c0c0c;
+    color: #fff;
+    padding: 50px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.footer-logo img {
+    max-width: 100px;
+}
+
+.footer-logo p {
+    max-width: 400px;
+    margin: 20px auto;
+    font-size: 1.1em;
+}
+
+.footer-icons a {
+    color: #fff;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer-icons a:hover {
+    color: #0c7aed;
+}
+
+.footer-content {
+    margin-top: 30px;
+}
+
+.footer-content h3 {
+    margin-bottom: 20px;
+}
+
+.footer-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-content li {
+    margin-bottom: 10px;
+}
+
+.footer-address h3 {
+    margin-bottom: 20px;
+}
+
+.footer-address ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-address li {
+    margin-bottom: 10px;
+}
+
+.footer-address h3 {
+    margin-bottom: 20px;
+}
+
+.footer-address ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-address li {
+    margin-bottom: 10px;
+}
+
+.footer-copyright {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+}
+
+
+
+/* @media (max-width: 1050px) {
+    .hero{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .matter1{
+        margin-top: -50px;
+    }
+} */
+@media (max-width: 1050px) {
+    .links {
+        display: none;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+
+    .logo {
+        width: 100px;
+    }
+    .logo{
+        width: 150px;
+    }
+    .hero{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .matter1{
+        margin-top: -25px;
+        width: 95%;
+        margin: 0;
+    }
+}
+    .image1{
+        width: 80%;
+}
+
+@media (max-width: 790px) {
+
+
+.image1{
+    margin-top: -60px;
+}
+}
+@media (max-width: 550px){
+    .head1{
+        font-size: 40px;
+    }
+    .head2{
+        font-size: 55px;
+        line-height: 70px;
+        text-align: center;
+        margin: 0;
+        margin-bottom: 30px;
+        /* background-color: green; */
+    }
+    .matter1{
+        width: 100%;
+        margin-top: -25px;
+        width: 95%;
+        text-align: center;
+        /* margin: 0; */
+    justify-content: center;
+padding-bottom: 78px;}
+    .image1{
+        height: 60%;
+        display: none;
+        margin-top: -100px;
+    }
+    .features{
+        height: auto;
+    }
+    .fcards{
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+
+    }
+    .cards{
+        width: 100%;
+        padding-bottom: 10px;
+    }
+    .membox{
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        
+    }
+    .mem{
+        width: 90%;
+    }
+}
+

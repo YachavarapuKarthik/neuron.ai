@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recently Viewed Products</title>
+    <link rel="stylesheet" href="../css/courses.css">
+    <link rel="stylesheet" href="../home.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="navbar">
+        <div class="navin">
+            <div class="logo"></div>
+            <div class="links">
+                <a href="/home.html">Home</a>
+                <a href="/home.html">What We Offer</a>
+                <a href="/html/ourstory.html">Our Story</a>
+                <a href="/html/courses.html">Courses</a>
+                <a href="/html/contact.html">Contact</a>
+                <a href="/html/register.html"><button class="btn1">Let's Get Started</button></a>
+               <!--- <a href="/html/login.html">  <button class="btn1">Log in</button></a>-->
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                &#9776; <!-- Hamburger icon -->
+            </div>
+        </div>
+    </div>
+
+    <section class="recently-viewed">
+        <h2>Upcoming Courses For You</h2>
+        <div class="products-container">
+            <div class="course-card">
+                <img src="/img/courses/webdev.png" alt="Course Image" class="course-image">
+                <div class="course-info">
+                    <h3>HTML, CSS, JAVASCRIPT for Web Developers</h3>
+                    <p>MODE: ONLINE</p>
+                    <p>Trainer: Kowsik Peddavarapu</p>
+                    <p class="price"><span class="discounted">₹599</span> <span class="original">₹3,499</span></p>
+                </div>
+                <input type="hidden" name="course-title" value="Front-End">
+               <a href="/html/register_courses.html?course-title=Front-End"><button class="enroll-button">Enroll Now</button></a>
+            </div>
+            <div class="course-card">
+                <img src="/img/courses/python.png" alt="Course Image" class="course-image">
+                <div class="course-info">
+                    <h3>Python for Beginners From Scratch</h3>
+                    <p>MODE: ONLINE</p>
+                    <p>Trainer: Karthik Yachavarapu</p>
+                    <p class="price"><span class="discounted">₹549</span> <span class="original">₹3,099</span></p>
+                </div>
+                <input type="hidden" name="course-title" value="Python">
+                 <a href="/html/register_courses.html?course-title=Python"><button class="enroll-button">Enroll Now</button></a>
+            </div>
+            
+            <div class="course-card">
+                <img src="/img/courses/react.png" alt="Course Image" class="course-image">
+                <div class="course-info">
+                    <h3>Core JAVA</h3>
+                    <p>MODE: ONLINE</p>
+                    <p>Trainer:Umeera</p>
+                    <p class="price"><span class="discounted">₹549</span> <span class="original">₹3,099</span></p>
+                </div>
+                <input type="hidden" name="course-title" value="java">
+                 <a href="/html/register_courses.html?course-title=java"><button class="enroll-button">Enroll Now</button></a>
+            </div>
+            
+            <div class="course-card">
+                <img src="/img/courses/interview.png" alt="Course Image" class="course-image">
+                <div class="course-info">
+                    <h3>Interview Training</h3>
+                    <p>MODE: ONLINE</p>
+                    <p>Trainer:Manosravya</p>
+                    <p>4 years Experience in Software</p>
+                    <p class="price"><span class="discounted">₹349</span> <span class="original">₹1,099</span></p>
+                </div>
+                 <a href="/html/register_courses.html?course-title=interview-training"><button class="enroll-button">Enroll Now</button></a>
+            </div>
+
+            <div class="course-card">
+                <img src="/img/courses/dsa.png" alt="Course Image" class="course-image">
+                <div class="course-info">
+                    <h3>Python for Beginners From Scratch</h3>
+                    <p>MODE: ONLINE</p>
+                    <p>Trainer: Karthik Yachavarapu</p>
+                    <p class="price"><span class="discounted">₹549</span> <span class="original">₹3,099</span></p>
+                </div>
+                 <a href="/html/register_courses.html?course-title=python"><button class="enroll-button">Enroll Now</button></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="search-results">
+        <h2>Completed Courses</h2>
+        <div class="products-container">
+            <div class="course-card">
+                <img src="/img/courses/webdev.png" alt="Course Image" class="course-image">
+                <div class="course-info">
+                    <h3>HTML, CSS, JAVASCRIPT for Web Developers</h3>
+                    <p>MODE: ONLINE</p>
+                    <p>Trainer: Kowsik Peddavarapu</p>
+                    <p>4.7 <span class="rating">★★★★☆</span> (16)</p>
+                </div>
+                <button class="enroll-button">Feedback</button>
+            </div>
+            <div class="course-card">
+                <img src="/img/courses/python.png" alt="Course Image" class="course-image">
+                <div class="course-info">
+                    <h3>Python for Beginners From Scratch</h3>
+                    <p>MODE: ONLINE</p>
+                    <p>Trainer: Karthik Yachavarapu</p>
+                    <p>4.8 <span class="rating">★★★★☆</span> (25)</p>
+                </div>
+                <button class="enroll-button">Feedback</button>
+            </div>
+
+            
+        </div>
+    </section>
+    <section class="popular-instructors">
+        <h2>Popular Instructors</h2>
+        <p>These real-world experts are highly rated by learners like you.</p>
+        <div class="carousel-container">
+          
+
+            <div class="carousel">
+                <div class="card">
+                    <img src="/img/karthik.jpg" alt="Instructor Image">
+                    <h3>Karthik Yacharavapu</h3>
+                    <p>Python </p>
+                    <p><span class="rating">4.7</span> ⭐ Instructor Rating</p>
+                    <p>25 students</p>
+                    <!-- <p>1 course</p> -->
+                </div>
+                <div class="card">
+                    <img src="/img/kowsik1.jpg" alt="Instructor Image">
+                    <h3>Kowsik Peddavarapu</h3>
+                    <p>HTML,CSS,JS</p>
+                    <p><span class="rating">4.6</span> ⭐ Instructor Rating</p>
+                    <p>18 students</p>
+                    <!-- <p>62 courses</p> -->
+                </div>
+                <div class="card">
+                    <img src="/img/bhargav1.jpg" alt="Instructor Image">
+                    <h3>Bhargav Chava</h3>
+                    <p>Expertise in web development</p>
+                    <p><span class="rating">4.6</span> ⭐ Instructor Rating</p>
+                    <!-- <p>3,006,098 students</p>
+                    <p>47 courses</p> -->
+                </div>
+
+
+                <div class="card">
+                    <img src="https://via.placeholder.com/100" alt="Instructor Image">
+                    <h3>Umeera</h3>
+                    <p>Java Trainee</p>
+                    <p><span class="rating">4.3</span> ⭐ Instructor Rating</p>
+                    <p>23 students</p>
+                    <!-- <p>37 courses</p> -->
+                </div>
+            </div>
+           
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-logo">
+            <img src="/img/logo.png" />
+            <p>At Neuron.ai, we thrive on innovation and thinking outside the box. Reach out to us for a comprehensive analysis and evaluation of your ideas, and let's bring your vision to life.</p>
+
+            <div class="footer-icons">
+                <a href="#"><i class="ri-mail-line"></i></a>
+                <a href="#"><i class="ri-instagram-line"></i></a>
+                <a href="#"><i class="ri-twitter-x-fill"></i></a>
+                <a href="#"><i class="ri-linkedin-fill"></i></a>
+            </div>
+        </div>
+        <div class="footer-content">
+            <div class="services">
+                <h3>Our Services</h3>
+                <ul>
+                    <li>Web Design</li>
+                    <li>Web Development</li>
+                    <li>NeuroLearnHub</li>
+                    <li>NeuroTrainerConnect</li>
+                </ul>
+                <ul>
+                    <li>NEUROPDF Transformer</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-address">
+            <div class="address">
+                <h3>Connect with us at</h3>
+                <ul>
+                    <li>Old town,kavali</li>
+                    <li>pincode-524201</li>
+                    
+                </ul>
+               
+            </div>
+
+        </div>
+        
+    </footer>
+    <div class="footer-copyright">
+        <p>Copyright &copy; 2024 Neuron.ai. All Rights Reserved</p>
+    </div>
+
+    <script >
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.course-card');
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    cards.forEach(card => {
+        observer.observe(card);
+    });
+});
+
+
+    </script>
+</body>
+</html>
